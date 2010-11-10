@@ -1,5 +1,6 @@
 source :rubygems
 gem "rails", "2.3.10"
+gem "annotate-models", "1.0.4"
 
 group :test do
   # bundler requires these gems while running tests

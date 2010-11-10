@@ -1,0 +1,2 @@
+module BannerAdsHelper
+end
