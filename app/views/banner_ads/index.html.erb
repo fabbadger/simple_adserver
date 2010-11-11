@@ -3,13 +3,15 @@
 <table>
   <tr>
     <th>Ad Id</th>
+    <th>Banner Ad</th>    
   </tr>
 
 <% @bads.each do |bad| %>
   <tr>
     <td><%=h bad.ad_id %></td>
-    <td><img src="banner_ads/<%= bad.ad_id %>.iframe">
-</td>
+    <td><% badimg = image_tag("#{bad.ad_id}.iframe", :alt => "Bannner Ad #{bad.ad_id} not available", :class => "round") %>
+      <%= link_to badimg, "images/#{bad.ad_id}.iframe" %>
+    </td>
   </tr>
 <% end %>
 </table>

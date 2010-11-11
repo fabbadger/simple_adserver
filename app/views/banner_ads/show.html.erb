@@ -1,21 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  .
-  .
-  .
-  <body>
-    <%= "HTML: If iframe worked then one would see ad with id #{@bad.ad_id} here" %>
+    <%= "If iframe worked then one would see ad with id #{@bad.ad_id} here" %>
     <p><%= "Otherwise try clicking on link below:" %>
-    <p><a href="/banner_ads/#{@bad.ad_id}">/banner_ads/<%= @bad.ad_id %></a>
+    <p><% badimg = image_tag("#{@bad.ad_id}.iframe", :alt => "Bannner Ad #{@bad.ad_id} not available", :class => "round") %>
+      <%= link_to badimg, "images/#{@bad.ad_id}.iframe" %>
 
-	    
-     <div class="container">
-      .
-      .
-      .
+    <div class="container">
       <%= debug(params) if Rails.env.development? %>
     </div>
-  </body>
 </html>
 

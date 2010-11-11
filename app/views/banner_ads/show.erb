@@ -2,7 +2,9 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <%= "If iframe worked then one would see ad with id #{@bad.ad_id} here" %>
-	    
+    <p><%= "Otherwise try clicking on link below:" %>
+    <p><a href="images/#{@bad.ad_id}.png"><%= @bad.ad_id %></a>
+
     <div class="container">
       <%= debug(params) if Rails.env.development? %>
     </div>
